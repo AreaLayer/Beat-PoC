@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P2P Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #chat-container {
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    #message-input {
+      width: 100%;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>P2P Chat</h1>
+  <div id="chat-container"></div>
+  <textarea id="message-input" placeholder="Type your message..."></textarea>
+
+  <script>
+    // JavaScript code for interacting with the chat application
+    const chatContainer = document.getElementById('chat-container');
+    const messageInput = document.getElementById('message-input');
+
+    // Function to display received messages in the chat container
+    function displayMessage(data) {
+      const message = `[${data.timestamp}] ${data.username}: ${data.message}`;
+      const messageElement = document.createElement('div');
+      messageElement.textContent = message;
+      chatContainer.appendChild(messageElement);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    // Function to send a message to the backend
+    function sendMessage() {
+      const message = messageInput.value.trim();
+      if (message) {
+        // Send the message to the backend (you'll need to implement this)
+        // For simplicity, we'll just call a sendMessage function which is not yet defined.
+        sendMessageToBackend(message);
+        messageInput.value = '';
+      }
+    }
+
+    // Event listener for Enter key press in the message input
+    messageInput.addEventListener('keyup', (event) => {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    // Dummy function for sending messages (replace this with your actual implementation)
+    function sendMessageToBackend(message) {
+      const data = {
+        username: 'YourUsername', // Replace 'YourUsername' with the actual username of the sender
+        message: message,
+        timestamp: new Date().toISOString(),
+      };
+      displayMessage(data);
+    }
+  </script>
+</body>
+</html>
