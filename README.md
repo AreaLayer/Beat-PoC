@@ -1,3 +1,3 @@
-# Beat PoC
+# Beat PoC ⚡ 📹
 
-P2P Chat on Hypercore for Beat
+ Proof of Concept in P2P Chat and Streaming of video on Hypercore for Beat 
