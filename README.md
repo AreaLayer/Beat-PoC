@@ -6,6 +6,12 @@
 
 Beat is a product designed for allow live streaming on Hypercore via P2P and with support to the Nostr.
 
+### How works?
+
+We use Hypercore and HyperDHT allow distribution between Peers allowing censorship resistent around lives
+
+The user can open lives and accepts of payments via Lightning Network incentiventing the V4V
+
 ## Demo Video
 
 TBD
