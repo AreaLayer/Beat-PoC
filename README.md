@@ -14,4 +14,4 @@ The user can open lives and accepts of payments via Lightning Network incentiven
 
 ## Demo Video
 
-TBD
+![Demo Video](https://github.com/AreaLayer/Beat-PoC/blob/main/demo-video/Beat-demo.gif)
